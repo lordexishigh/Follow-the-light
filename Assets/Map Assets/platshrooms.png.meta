@@ -1,0 +1,1449 @@
+fileFormatVersion: 2
+guid: e7f2940b77689f14694b102b03af0169
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -208161018367520565
+    second: platshrooms_1
+  - first:
+      213: 703480762928377489
+    second: platshrooms_2
+  - first:
+      213: -4140216245969493909
+    second: platshrooms_3
+  - first:
+      213: -1792934520228056929
+    second: platshrooms_4
+  - first:
+      213: 3531528589507346533
+    second: platshrooms_5
+  - first:
+      213: -8638249126905409825
+    second: platshrooms_6
+  - first:
+      213: 7711945845017643938
+    second: platshrooms_7
+  - first:
+      213: 5951939665670103308
+    second: platshrooms_8
+  - first:
+      213: -1668924624901821896
+    second: platshrooms_9
+  - first:
+      213: 6353174950362783161
+    second: platshrooms_10
+  - first:
+      213: 8452466316281182722
+    second: platshrooms_11
+  - first:
+      213: -173851812485231796
+    second: platshrooms_12
+  - first:
+      213: 4490815870464437134
+    second: platshrooms_13
+  - first:
+      213: -4405324662664942221
+    second: platshrooms_14
+  - first:
+      213: -4389377728822066510
+    second: platshrooms_15
+  - first:
+      213: 72058987166042985
+    second: platshrooms_16
+  - first:
+      213: 8725576745307730126
+    second: platshrooms_17
+  - first:
+      213: -3454243840188728704
+    second: platshrooms_18
+  - first:
+      213: 6575733887000679797
+    second: platshrooms_19
+  - first:
+      213: -6147474058734662143
+    second: platshrooms_20
+  - first:
+      213: -7747214036456889744
+    second: platshrooms_21
+  - first:
+      213: -7599331987740281803
+    second: platshrooms_22
+  - first:
+      213: 6958120624777832275
+    second: platshrooms_23
+  - first:
+      213: -5247885289310983598
+    second: platshrooms_24
+  - first:
+      213: -9164883723941165365
+    second: platshrooms_25
+  - first:
+      213: -2720450285033696512
+    second: platshrooms_26
+  - first:
+      213: -5997017624465656563
+    second: platshrooms_27
+  - first:
+      213: 9153621855428522353
+    second: platshrooms_28
+  - first:
+      213: 1916366672089269619
+    second: platshrooms_29
+  - first:
+      213: -5004174444216017765
+    second: platshrooms_30
+  - first:
+      213: -2799661302998063088
+    second: platshrooms_31
+  - first:
+      213: 2166449727900888878
+    second: platshrooms_32
+  - first:
+      213: -6145981472543448225
+    second: platshrooms_33
+  - first:
+      213: 5972302636313529175
+    second: platshrooms_34
+  - first:
+      213: -5430641605854607174
+    second: platshrooms_35
+  - first:
+      213: -6573725151662844834
+    second: platshrooms_36
+  - first:
+      213: -7823424021129547949
+    second: platshrooms_37
+  - first:
+      213: -6284898822912510425
+    second: platshrooms_38
+  - first:
+      213: 5489319711838525569
+    second: platshrooms_39
+  - first:
+      213: 113227561249179298
+    second: platshrooms_40
+  - first:
+      213: 1187710648680530868
+    second: platshrooms_41
+  - first:
+      213: -7807146421215791387
+    second: platshrooms_42
+  - first:
+      213: -8691472682231760598
+    second: platshrooms_43
+  - first:
+      213: 8015632464944595028
+    second: platshrooms_44
+  - first:
+      213: 704503331619733734
+    second: platshrooms_45
+  - first:
+      213: 2025593577950473179
+    second: platshrooms_46
+  - first:
+      213: 8769259236364902202
+    second: platshrooms_47
+  - first:
+      213: 6165560363136439863
+    second: platshrooms_48
+  - first:
+      213: 330903250533666076
+    second: platshrooms_49
+  - first:
+      213: 5605974562738390939
+    second: platshrooms_50
+  - first:
+      213: 530578248205274210
+    second: platshrooms_51
+  - first:
+      213: 2171643879338165244
+    second: platshrooms_52
+  - first:
+      213: -1835915884325403694
+    second: platshrooms_53
+  - first:
+      213: -4931065031782539639
+    second: platshrooms_54
+  - first:
+      213: 9031262851474254778
+    second: platshrooms_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: platshrooms_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 472
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13deafa26da03f010800000000000000
+      internalID: 1221331838907903281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 405
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0de1c18a67c1df0800000000000000
+      internalID: -208161018367520565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 405
+        width: 33
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19eaaa4d60443c900800000000000000
+      internalID: 703480762928377489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 406
+        width: 64
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60efa5924ffa86c0800000000000000
+      internalID: -4140216245969493909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 406
+        width: 97
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f907540ad873e17e0800000000000000
+      internalID: -1792934520228056929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_5
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 467
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560c8b39a82820130800000000000000
+      internalID: 3531528589507346533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_6
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 407
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde897dbf26ce1880800000000000000
+      internalID: -8638249126905409825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 405
+        width: 32
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab835be2e5560b60800000000000000
+      internalID: 7711945845017643938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 406
+        width: 64
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01e2d85799899250800000000000000
+      internalID: 5951939665670103308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_9
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 408
+        width: 100
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a23df55e9c6d8e0800000000000000
+      internalID: -1668924624901821896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_10
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 469
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd9840f4f20b2850800000000000000
+      internalID: 6353174950362783161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_11
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 405
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20af4e1e4513d4570800000000000000
+      internalID: 8452466316281182722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_12
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 407
+        width: 33
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b824992ba569df0800000000000000
+      internalID: -173851812485231796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_13
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 409
+        width: 64
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b28b6ad35925e30800000000000000
+      internalID: 4490815870464437134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 406
+        width: 97
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37da6994f842dd2c0800000000000000
+      internalID: -4405324662664942221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 277
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2cc88263cc513c0800000000000000
+      internalID: -4389377728822066510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_16
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 213
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b08ec5441000100800000000000000
+      internalID: 72058987166042985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_17
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 213
+        width: 33
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0f97cd1d9771970800000000000000
+      internalID: 8725576745307730126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_18
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 213
+        width: 65
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a38f9578f0010d0800000000000000
+      internalID: -3454243840188728704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 212
+        width: 97
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5759c286123b14b50800000000000000
+      internalID: 6575733887000679797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_20
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 275
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e013f0ae8cfaaa0800000000000000
+      internalID: -6147474058734662143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_21
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 215
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072211e51ed5c7490800000000000000
+      internalID: -7747214036456889744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_22
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 215
+        width: 33
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5343a74f1dfb98690800000000000000
+      internalID: -7599331987740281803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 214
+        width: 64
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357a330b7d5309060800000000000000
+      internalID: 6958120624777832275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 214
+        width: 97
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25aee944224cb27b0800000000000000
+      internalID: -5247885289310983598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_25
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 274
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc64aba8fcacfc080800000000000000
+      internalID: -9164883723941165365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_26
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 214
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003d47b11e40f3ad0800000000000000
+      internalID: -2720450285033696512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 212
+        width: 32
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05b7fd7e3056cca0800000000000000
+      internalID: -5997017624465656563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_28
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 214
+        width: 64
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171b11d5492380f70800000000000000
+      internalID: 9153621855428522353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_29
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 213
+        width: 96
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375474db55d489a10800000000000000
+      internalID: 1916366672089269619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 83
+        width: 34
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c9a623bd99d8ab0800000000000000
+      internalID: -5004174444216017765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_31
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 56
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018a46fc0ea9529d0800000000000000
+      internalID: -2799661302998063088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_32
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 24
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f26479c86c01e10800000000000000
+      internalID: 2166449727900888878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 23
+        width: 33
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f536aecd96615baa0800000000000000
+      internalID: -6145981472543448225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_34
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 23
+        width: 63
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bc898ea91e1e250800000000000000
+      internalID: 5972302636313529175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 22
+        width: 96
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab844947b3c72a4b0800000000000000
+      internalID: -5430641605854607174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_36
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 87
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54d51cbdcf65c4a0800000000000000
+      internalID: -6573725151662844834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_37
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 87
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fa0559d4d9d6390800000000000000
+      internalID: -7823424021129547949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_38
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 55
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7267703c1dd87c8a0800000000000000
+      internalID: -6284898822912510425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_39
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 23
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1885faab13bfd2c40800000000000000
+      internalID: 5489319711838525569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a68a07fdd3429100800000000000000
+      internalID: 113227561249179298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 24
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b34d8eca889b7010800000000000000
+      internalID: 1187710648680530868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_42
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 120
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e678f5a1b177a390800000000000000
+      internalID: -7807146421215791387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 24
+        width: 63
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29709815afa16780800000000000000
+      internalID: -8691472682231760598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 119
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4508c1b124f3d3f60800000000000000
+      internalID: 8015632464944595028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 23
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e006482c06e6c900800000000000000
+      internalID: 704503331619733734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_46
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 86
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbec0980aa5c1c10800000000000000
+      internalID: 2025593577950473179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_47
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 83
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fd7de50daa2b970800000000000000
+      internalID: 8769259236364902202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_48
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 56
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736d9f5db78709550800000000000000
+      internalID: 6165560363136439863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_49
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 25
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dc41fc0ca979400800000000000000
+      internalID: 330903250533666076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_50
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 120
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97c5efb92c6ccd40800000000000000
+      internalID: 5605974562738390939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_51
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 24
+        width: 33
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c03d90b1efc5700800000000000000
+      internalID: 530578248205274210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_52
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 120
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf34a963a9a332e10800000000000000
+      internalID: 2171643879338165244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_53
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 23
+        width: 64
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d38945fa348586e0800000000000000
+      internalID: -1835915884325403694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_54
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 119
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e5040ca76519bb0800000000000000
+      internalID: -4931065031782539639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platshrooms_55
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 22
+        width: 97
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbed47b6bd755d70800000000000000
+      internalID: 9031262851474254778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
