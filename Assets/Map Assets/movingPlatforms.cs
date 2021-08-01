@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class movingPlatforms : MonoBehaviour
 {
-    public GameObject loc1;
-    public GameObject loc2;
+    //public GameObject loc1;
+    //public GameObject loc2;
+
+    public GameObject[] loc;
+    private int currentPosition;
 
     private GameObject target;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = loc1;
+        //target = loc1;
+        currentPosition = 0;
+        target = loc[0];
     }
 
     // Update is called once per frame
@@ -20,9 +25,10 @@ public class movingPlatforms : MonoBehaviour
     {
         if(gameObject.transform.position == target.transform.position)
         {
-            if (target == loc1) { target = loc2; }
+            if (loc.Length > currentPosition + 1) { currentPosition++; }
+            else { currentPosition = 0; }
 
-            else { target = loc1; }
+            target = loc[currentPosition];
         }
 
         else

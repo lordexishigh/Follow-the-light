@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4a27c34679382bc4181d93dea467e1c7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - aAssassinNinja
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b02caa43a81d9f041abf147450a4fc29, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

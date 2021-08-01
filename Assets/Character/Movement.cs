@@ -18,7 +18,10 @@ public class Movement : MonoBehaviour
     private float jumpSpeed;
     [SerializeField]
     public bool OnGround;
-    
+
+    public bool carries;
+    public bool expReady;
+
     private Rigidbody2D rigidBody;
     private Controller cotr;
 
@@ -38,74 +41,53 @@ public class Movement : MonoBehaviour
 
         jumpSpeed = 10f;
         OnGround = true;
+
+        carries = false;
+        expReady = true;
     }
 
     void FixedUpdate()
     {
-        left = Input.GetAxis("Left");
-        right = Input.GetAxis("Right");
+        if (!carries)
+        {
+            left = Input.GetAxis("Left");
+            right = Input.GetAxis("Right");
 
-        if (left + right == 0)
-        {
-            if (OnGround)
-            {
-                velocity = 0f; acceleration = 0.005f;
-            }
-        }
-        else
-        {
-            if ((((left + right) > 0) && (velocity < 0)) || ((left + right) < 0) && (velocity > 0))
+            if (left + right == 0)
             {
                 if (OnGround)
                 {
                     velocity = 0f; acceleration = 0.005f;
                 }
-                else
-                    velocity += (left + right) * acceleration;
             }
-            else if (Mathf.Abs(velocity) < maxVelocity)
+            else
             {
-                velocity += (left + right) * acceleration;
+                if ((((left + right) > 0) && (velocity < 0)) || ((left + right) < 0) && (velocity > 0))
+                {
+                    if (OnGround)
+                    {
+                        velocity = 0f; acceleration = 0.005f;
+                    }
+                    else
+                        velocity += (left + right) * acceleration;
+                }
+                else if (Mathf.Abs(velocity) < maxVelocity)
+                {
+                    velocity += (left + right) * acceleration;
+                }
             }
+
+            rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
+            transform.position = transform.position + new Vector3(velocity, 0, 0);
+        }
+        else
+        {
+            velocity = 0f;
+            rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
+            transform.position = transform.position + new Vector3(velocity, 0, 0);
         }
 
-        rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
-        transform.position = transform.position + new Vector3(velocity, 0, 0);
-
     }
-
-    //public void MovementFunc(float left, float right)
-    //{
-    //    //left = Input.GetAxis("Left");
-    //    //right = Input.GetAxis("Right");
-
-    //    if (left + right == 0)
-    //    {
-    //        if (OnGround)
-    //        {
-    //            velocity = 0f; acceleration = 0.005f;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        if ((((left + right) > 0) && (velocity < 0)) || ((left + right) < 0) && (velocity > 0))
-    //        {
-    //            if (OnGround)
-    //            {
-    //                velocity = 0f; acceleration = 0.005f;
-    //            }
-    //            else
-    //                velocity += (left + right) * acceleration;
-    //        }
-    //        else if (Mathf.Abs(velocity) < maxVelocity)
-    //        {
-    //            velocity += (left + right) * acceleration;
-    //        }
-    //    }
-
-    //    rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
-    //    transform.position = transform.position + new Vector3(velocity, 0, 0);
-    //}
 
     public void Jump(float xspeed = 0, float direction = 0)
     {
@@ -116,21 +98,11 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        OnGround = true;
-        while(((left + right) * velocity > maxVelocity) && OnGround )
+        while (((left + right) * velocity > maxVelocity)) //this will slow down the player if they went about the max velocity limit during their jump
         {
-            velocity -= (left+right) * acceleration/2;
+            velocity -= (left + right) * acceleration / 2;
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "MovingPlatform" && OnGround)
-        {
-            evaluateCollisionPlatform(collision);
-        }
-
-        else if (OnGround) { evaluateCollision(collision); }
+        evaluateCollision(collision);
     }
 
     private void evaluateCollision(Collision2D collision)
@@ -138,20 +110,13 @@ public class Movement : MonoBehaviour
         for (int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
-            cotr.expReady = OnGround |= normal.y >= 0.7f;
-        }
-
-    }
-
-    private void evaluateCollisionPlatform(Collision2D collision)
-    {
-        for (int i = 0; i < collision.contactCount; i++)
-        {
-            Vector2 normal = collision.GetContact(i).normal;
             if (normal.y >= 0.7f)
             {
-                cotr.expReady = OnGround = true;
-                gameObject.transform.SetParent(collision.transform);
+                expReady = OnGround = true;
+                if (collision.gameObject.tag == "MovingPlatform")
+                {
+                    gameObject.transform.SetParent(collision.transform);
+                }
             }
         }
     }
