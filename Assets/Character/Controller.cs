@@ -5,19 +5,20 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     private Movement mov;
-    public GameObject _ai;
+    //public GameObject _ai;
     private AI ai;
-    public Camera Cam;
-
-    public bool expReady;
+    private PostProcessing cam;
 
     // Start is called before the first frame update
     void Start()
     {
-        mov = GetComponent<Movement>();
+        GameObject _ai = GameObject.FindWithTag("AI");
+        GameObject _cam = GameObject.FindWithTag("MainCamera");
+        
         ai = _ai.GetComponent<AI>();
+        cam = _cam.GetComponent<PostProcessing>();
 
-        expReady = true;
+        mov = GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -27,29 +28,34 @@ public class Controller : MonoBehaviour
         {
             mov.Jump();
         }
-        else if (Input.GetButtonDown("ExplosiveJumpE") && expReady)
+        else if (Input.GetButtonDown("ExplosiveJumpE") && mov.expReady)
         {
-            expReady = false;
+            mov.expReady = false;
             mov.Jump(mov.maxVelocity, 1);
         }
-        else if (Input.GetButtonDown("ExplosiveJumpQ") && expReady)
+        else if (Input.GetButtonDown("ExplosiveJumpQ") && mov.expReady)
         {
-            expReady = false;
+            mov.expReady = false;
             mov.Jump(mov.maxVelocity, -1);
         }
 
-        if (Input.GetButtonDown("Command")) {
-            ai.Commanded();
-        }
-
-        if (Input.GetMouseButtonDown(0) && ai.commanded)
-        {
+        else if (Input.GetButtonDown("Command")) {
             ai.Commanded((Camera.main.ScreenToWorldPoint(Input.mousePosition)).x);
         }
 
-        if (Input.GetButtonDown("Boost"))
+        else if (Input.GetButtonDown("Carry"))
+        {
+            ai.Carry();
+        }
+
+        else if (Input.GetButtonDown("Boost"))
         {
             ai.Boosted();
+        }
+
+        else if (Input.GetButtonDown("Drink"))
+        {
+            cam.Drink();
         }
     }
 }

@@ -1,0 +1,2 @@
+Make pickups
+AI not dropping, adding collision on edges ?
