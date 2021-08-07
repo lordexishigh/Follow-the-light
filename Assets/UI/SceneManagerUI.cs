@@ -11,15 +11,28 @@ public class SceneManagerUI : MonoBehaviour
     void Start()
     {
         GameObject _ai = GameObject.FindWithTag("AI");
-        ai = _ai.GetComponent<AI>();
+        if (_ai != null)
+        {
+            ai = _ai.GetComponent<AI>();
+        }
     }
 
-    public void LoadNextScene(int food = 0)
+    public void LoadNextScene(int neededFood = 0)
     {
-        if (food <= ai.getFood())
+        if (SceneManager.GetActiveScene().name != "Main Menu")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (neededFood > ai.getFood())
+            {
+                print("not enough food");
+                return;
+            }
+            if (ai.getCarriedReached())
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else { print("AI not picked"); }
         }
+        else { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
     }
 
     public void LoadPreviousScene()
@@ -34,13 +47,13 @@ public class SceneManagerUI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision);
-        if(collision.gameObject.tag == "Player")
+
+        if (collision.gameObject.tag == "Player")
         {
-            if (SceneManager.GetActiveScene().buildIndex % 5 == 0) {
+            if (SceneManager.GetActiveScene().buildIndex % 2 == 0) {
                 LoadNextScene(SceneManager.GetActiveScene().buildIndex);
             }
-            else { LoadNextScene(); }
+            else { LoadNextScene(0); }
         }
     }
 }

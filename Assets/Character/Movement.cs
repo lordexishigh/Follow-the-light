@@ -6,7 +6,6 @@ using System.Threading;
 public class Movement : MonoBehaviour
 {
     private float left, right;
-    private Vector2 lastInput;
 
     [SerializeField]
     private float acceleration;
@@ -30,9 +29,9 @@ public class Movement : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         cotr = GetComponent<Controller>();
-
+        Physics.IgnoreLayerCollision(0, 6);
+        print("here");
         left = right = 0f;
-        lastInput = new Vector2(0, 0);
 
         velocity = 0.001f;
         maxVelocity = 0.075f;
@@ -107,17 +106,26 @@ public class Movement : MonoBehaviour
 
     private void evaluateCollision(Collision2D collision)
     {
+        bool hit = false;
         for (int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
             if (normal.y >= 0.7f)
             {
-                expReady = OnGround = true;
+
+                hit = expReady = OnGround = true;
                 if (collision.gameObject.tag == "MovingPlatform")
                 {
                     gameObject.transform.SetParent(collision.transform);
                 }
             }
+        }
+
+        if(hit == false)
+        {
+            velocity = 0f;
+            rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
+            transform.position = transform.position + new Vector3(velocity, 0, 0);
         }
     }
 

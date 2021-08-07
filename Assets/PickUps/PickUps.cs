@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class PickUps : MonoBehaviour
 {
     private AI ai;
-   // private GameObject uiText;
     private Text tex;
 
     // Start is called before the first frame update
@@ -16,6 +15,7 @@ public class PickUps : MonoBehaviour
         tex = uiText.GetComponent<Text>();
         GameObject _ai = GameObject.FindWithTag("AI");
         ai = _ai.GetComponent<AI>();
+        tex.text = (ai.getFood()).ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -23,7 +23,7 @@ public class PickUps : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             ai.FoodPickup();
-            tex.text = ai.food.ToString();
+            tex.text = (ai.getFood()).ToString();
             Destroy(gameObject);
         }
     }

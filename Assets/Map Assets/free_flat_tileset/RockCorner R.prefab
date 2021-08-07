@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5061390067212494259}
   - component: {fileID: 5061390067212494258}
   - component: {fileID: 1195861366875814830}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: RockCorner R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
