@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6031735184295856963}
   - component: {fileID: 6031735184295856960}
   - component: {fileID: 2720071761695083729}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: RockWall L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

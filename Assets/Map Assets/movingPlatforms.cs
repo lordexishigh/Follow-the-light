@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class movingPlatforms : MonoBehaviour
 {
-    //public GameObject loc1;
-    //public GameObject loc2;
-
     public GameObject[] loc;
     private int currentPosition;
 
@@ -15,7 +12,7 @@ public class movingPlatforms : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //target = loc1;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
         currentPosition = 0;
         target = loc[0];
     }

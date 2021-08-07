@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2926424083397208841}
   - component: {fileID: 257580758949324051}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: RockFullWall L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 6031735184295856962, guid: d74583ac2dc977f4fb9efae25605c614, type: 3}
       propertyPath: m_Name
       value: RockWall L
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031735184295856962, guid: d74583ac2dc977f4fb9efae25605c614, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6031735184295856962, guid: d74583ac2dc977f4fb9efae25605c614, type: 3}
       propertyPath: m_IsActive
@@ -142,6 +146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockCorner L (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3807935328268409300, guid: 525baa9685f1e604783688a1f4451998, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3807935328268409301, guid: 525baa9685f1e604783688a1f4451998, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -204,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 5061390067212494252, guid: 01d36b56630f1c94fb1a7e9d557d9f5e, type: 3}
       propertyPath: m_Name
       value: RockCorner R (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061390067212494252, guid: 01d36b56630f1c94fb1a7e9d557d9f5e, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5061390067212494259, guid: 01d36b56630f1c94fb1a7e9d557d9f5e, type: 3}
       propertyPath: m_RootOrder

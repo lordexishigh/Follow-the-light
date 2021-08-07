@@ -23,7 +23,8 @@ public class AI : MonoBehaviour
     private float comPos;
     private float distance;
 
-    public float food; 
+    [SerializeField]
+    private static int food = 0; 
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,7 @@ public class AI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rigidBody = GetComponent<Rigidbody2D>();
 
-        comPos = 0f;
-        food = 0f;
-
+        comPos = 0f;    
         distance = 2f;
         dir = 0f; //direction
 
@@ -51,7 +50,7 @@ public class AI : MonoBehaviour
         {
             mov = player.GetComponent<Movement>();
         }
-
+        Physics2D.IgnoreLayerCollision(6, 6, false);
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -158,12 +157,14 @@ public class AI : MonoBehaviour
         if (carry)
         {
             boost = false;
+            Physics2D.IgnoreLayerCollision(6, 6);
             Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             distance = 0f;
         }
 
         else
         {
+            Physics2D.IgnoreLayerCollision(6, 6, false);
             carryReached = false;
             gameObject.transform.SetParent(null);
             distance = 2f;
@@ -175,8 +176,13 @@ public class AI : MonoBehaviour
         food++;
     }
 
-    public float getFood()
+    public int getFood()
     {
         return food;
+    }
+
+    public bool getCarriedReached()
+    {
+        return carryReached;
     }
 }

@@ -123,8 +123,6 @@ MonoBehaviour:
   velocity: 0
   maxVelocity: 0
   OnGround: 0
-  carries: 0
-  expReady: 0
 --- !u!114 &6475620367959110530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42da0bf4eb4af439b667a87efdafc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!61 &6475620367959110529
 BoxCollider2D:
   m_ObjectHideFlags: 0
