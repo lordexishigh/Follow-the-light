@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    private Text tex;
-    private AI ai;
+    private SceneManagerUI sm;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        tex = GetComponent<Text>();
-        GameObject _ai = GameObject.FindWithTag("Player");
-        ai = _ai.GetComponent<AI>();
+        GameObject temp = GameObject.Find("nextLevel");
+        sm = temp.GetComponent<SceneManagerUI>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            sm.RestartScene();
+        }
     }
 }

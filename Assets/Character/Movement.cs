@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         cotr = GetComponent<Controller>();
         Physics.IgnoreLayerCollision(0, 6);
-        print("here");
+
         left = right = 0f;
 
         velocity = 0.001f;
@@ -121,7 +121,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if(hit == false)
+        if (hit == false)
         {
             velocity = 0f;
             rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);

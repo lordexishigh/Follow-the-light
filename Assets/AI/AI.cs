@@ -24,7 +24,10 @@ public class AI : MonoBehaviour
     private float distance;
 
     [SerializeField]
-    private static int food = 0; 
+    private static int food = 0;
+    private static int tempFood = 0;
+
+    private static Vector3 maxScale = new Vector3(1,1,1);
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +38,16 @@ public class AI : MonoBehaviour
         comPos = 0f;    
         distance = 2f;
         dir = 0f; //direction
+        //food += tempFood;
+        tempFood = 0;
 
         velocity = 0.001f;
         maxVelocity = 0.05f;
 
         acceleration = 0.001f;
+
+        transform.localScale = maxScale;
+
 
         commanded = false;
         boost = false;
@@ -50,7 +58,8 @@ public class AI : MonoBehaviour
         {
             mov = player.GetComponent<Movement>();
         }
-        Physics2D.IgnoreLayerCollision(6, 6, false);
+ 
+        Physics2D.IgnoreLayerCollision(6, 7, false);
         Physics2D.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -103,7 +112,7 @@ public class AI : MonoBehaviour
             }
         }
 
-        if (transform.localScale.x < 1f && !carry )
+        if (transform.localScale.x < maxScale.x && !carry )
         {
             transform.localScale = new Vector3(transform.localScale.x + 0.01f, transform.localScale.y + 0.01f, 0);
         }
@@ -171,9 +180,20 @@ public class AI : MonoBehaviour
         }
     }
 
+    public void FoodReset()
+    {
+        food -= tempFood;
+    }
+
     public void FoodPickup()
     {
-        food++;
+        food++; tempFood++;
+        maxScale = new Vector3(transform.localScale.x + 0.1f, transform.localScale.y + 0.1f, 1);
+    }
+
+    public int getTempFood()
+    {
+        return tempFood;
     }
 
     public int getFood()
