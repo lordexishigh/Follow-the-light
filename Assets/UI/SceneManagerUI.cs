@@ -17,22 +17,15 @@ public class SceneManagerUI : MonoBehaviour
         }
     }
 
-    public void LoadNextScene(int neededFood = 0)
+    public void LoadNextScene()
     {
-        if (SceneManager.GetActiveScene().name != "Main Menu")
-        {
-            if (neededFood > ai.getFood())
-            {
-                print("not enough food");
-                return;
-            }
-            if (ai.getCarriedReached())
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            else { print("AI not picked"); }
-        }
-        else { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+    }
+
+    public void RestartScene() 
+    {
+        ai.FoodReset();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadPreviousScene()
@@ -47,13 +40,24 @@ public class SceneManagerUI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Player")
         {
-            if (SceneManager.GetActiveScene().buildIndex % 2 == 0) {
-                LoadNextScene(SceneManager.GetActiveScene().buildIndex);
+            if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
+            {
+                if (SceneManager.GetActiveScene().buildIndex > ai.getFood())
+                {
+                    print("not enough food");
+                    return;
+                }
+
+                if (!ai.getCarriedReached())
+                {
+                    print("AI not picked");
+                    return;
+                }
             }
-            else { LoadNextScene(0); }
+
+            LoadNextScene(); 
         }
     }
 }
