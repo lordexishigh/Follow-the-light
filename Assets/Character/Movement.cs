@@ -97,6 +97,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         while (((left + right) * velocity > maxVelocity)) //this will slow down the player if they went about the max velocity limit during their jump
         {
             velocity -= (left + right) * acceleration / 2;
@@ -110,6 +111,7 @@ public class Movement : MonoBehaviour
         for (int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
+            print(normal);
             if (normal.y >= 0.7f)
             {
 
