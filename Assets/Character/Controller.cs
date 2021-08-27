@@ -24,19 +24,19 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && mov.OnGround)
+        if (Input.GetButtonDown("Jump") && mov.JumpAvailable)
         {
             mov.Jump();
         }
         else if (Input.GetButtonDown("ExplosiveJumpE") && mov.expReady)
         {
             mov.expReady = false;
-            mov.Jump(mov.maxVelocity, 1);
+            mov.Jump(0.07f, 1);
         }
         else if (Input.GetButtonDown("ExplosiveJumpQ") && mov.expReady)
         {
             mov.expReady = false;
-            mov.Jump(mov.maxVelocity, -1);
+            mov.Jump(0.07f, -1);
         }
 
         else if (Input.GetButtonDown("Command")) {
