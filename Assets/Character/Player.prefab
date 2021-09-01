@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 380ccb04cbe655f41afcb0b45f759502, type: 3}
+  m_Color: {r: 1, g: 0.6392157, b: 0.09411766, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,7 +123,9 @@ MonoBehaviour:
   velocity: 0
   maxVelocity: 0
   JumpAvailable: 0
+  WallJumpDirection: 0
   OnGround: 0
+  OnWall: 0
   carries: 0
   expReady: 0
 --- !u!114 &6475620367959110530
