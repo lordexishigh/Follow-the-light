@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     private float groundAccelaration;
-    private float airAcceleration;
+    //private float airAcceleration;
     //private float deceleration;
 
     [SerializeField]
@@ -19,10 +19,10 @@ public class Movement : MonoBehaviour
     private float jumpSpeed;
     [SerializeField]
     public bool JumpAvailable;
-    public float WallJumpDirection;
+    //public float WallJumpDirection;
 
     public bool OnGround;
-    public bool OnWall;
+    //public bool OnWall;
     public bool carries;
     public bool expReady;
 
@@ -37,64 +37,66 @@ public class Movement : MonoBehaviour
         Physics.IgnoreLayerCollision(0, 6);
 
         left = right = 0f;
-        WallJumpDirection = 0f;
+       // WallJumpDirection = 0f;
         velocity = 0.001f;
-        maxVelocity = 0.12f;
+        maxVelocity = 0.1f;
 
         groundAccelaration = 0.005f;
-        airAcceleration = 0.001f;
-        //deceleration = 0.01f;
+        //airAcceleration = 0.001f;
+        //deceleration = 0.1f;
 
         jumpSpeed = 10f;
         JumpAvailable = true;
         OnGround = true;
-        OnWall = false;
+       // OnWall = false;
         carries = false;
         expReady = true;
     }
 
     void FixedUpdate()
     {
-
         if (!carries)
         {
-            left = Input.GetAxis("Left");
-            right = Input.GetAxis("Right");
+            left = Input.GetAxisRaw("Left");
+            right = Input.GetAxisRaw("Right");
 
             if (OnGround)
             {
                 if (left + right == 0)
                 {
-                    velocity = 0f;
+                    velocity = 0;
                 }
 
-                //if (OnGround)
-                //{
-                if (left + right > 0 && velocity < 0 || left + right < 0 && velocity > 0)
+                else if (left + right > 0 && velocity < 0 || left + right < 0 && velocity > 0)
                 {
                     velocity = 0f;
                 }
 
+                //else if (Mathf.Abs(velocity) < maxVelocity)
+                //{
+                //    velocity += (left + right) * groundAccelaration;
+                //}
             }
-            //else
-            //{
-            //    velocity += (left + right) * groundAccelaration;
-            //}
 
-            //if (Mathf.Abs(velocity) > maxVelocity)
-            //{
-            //    velocity -= (left + right) * 0.001f;
-            //}
+            else
+            {
+                if (left + right > 0 && velocity < 0 || left + right < 0 && velocity > 0) // to alow mid air movement
+                {
+                    velocity += (left + right) * groundAccelaration;
+                }
+             
+
+                //else if (Mathf.Abs(velocity) < maxVelocity)
+                //{
+                //    velocity += (left + right) * groundAccelaration;
+                //}
+            }
+
             if (Mathf.Abs(velocity) < maxVelocity)
             {
                 velocity += (left + right) * groundAccelaration;
             }
-                
-            //}
-            //else
-            //{
-            //    velocity += (left + right) * airAcceleration;
-            //}
+
         }
         else
         {
@@ -105,12 +107,13 @@ public class Movement : MonoBehaviour
 
     public void Jump(float xspeed = 0, float direction = 0)
     {
-        if (OnWall)
-        {
-            xspeed = 0.2f;
-            direction = WallJumpDirection;
-        }
-        else if (xspeed!=0 && ((velocity > 0 && direction < 0) || velocity < 0 && direction > 0)){
+        //if (OnWall)
+        //{
+        //    xspeed = 0.2f;
+        //    direction = WallJumpDirection;
+        //}
+        //else
+        if (xspeed!=0 && ((velocity > 0 && direction < 0) || velocity < 0 && direction > 0)){
             velocity = 0f;
         }
         velocity += direction * xspeed;
@@ -128,16 +131,16 @@ public class Movement : MonoBehaviour
         evaluateCollision(collision);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        OnWall = true;
-        JumpAvailable = true;
-        if (velocity > 0)
-        {
-            WallJumpDirection = -1;
-        }
-        else { WallJumpDirection = 1; }
-    }
+    //private void OnTriggerEnter2D(Collider2D collider)
+    //{
+    //    OnWall = true;
+    //    JumpAvailable = true;
+    //    if (velocity > 0)
+    //    {
+    //        WallJumpDirection = -1;
+    //    }
+    //    else { WallJumpDirection = 1; }
+    //}
 
     private void evaluateCollision(Collision2D collision)
     {
@@ -146,28 +149,23 @@ public class Movement : MonoBehaviour
         for (int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
-            print(normal);
-            if (normal.y >= 0)
+
+            if (normal.y >= 0.6f)
             {
-                 OnGround = true;
-                
-                if (normal.y >= 0.6f)
+                OnGround = true;
+                collided = expReady = JumpAvailable = true;
+                if (collision.gameObject.tag == "MovingPlatform")
                 {
-                    collided = expReady = JumpAvailable = true;
-                    if (collision.gameObject.tag == "MovingPlatform")
-                    {
-                        gameObject.transform.SetParent(collision.transform);
-                    }
+                    gameObject.transform.SetParent(collision.transform);
                 }
             }
+           
 
             if(Mathf.Abs(normal.x) > 0.7f)
             {
                 velocity = 0f;
             }
         }
-
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -178,11 +176,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        OnWall = false;
-        JumpAvailable = false;
-    }
+    //private void OnTriggerExit2D(Collider2D collider)
+    //{
+    //    OnWall = false;
+    //    JumpAvailable = false;
+    //}
 
     private void UpdatePlayer()
     {

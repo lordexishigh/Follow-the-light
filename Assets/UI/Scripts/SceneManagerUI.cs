@@ -18,7 +18,7 @@ public class SceneManagerUI : MonoBehaviour
         {
             ai = _ai.GetComponent<AI>();
         }
-        pauseP = GameObject.Find("PausePanel");
+        pauseP = gameObject.transform.Find("PausePanel").gameObject; 
         pauseP.SetActive(false);
         paused = false;
     }
@@ -42,7 +42,6 @@ public class SceneManagerUI : MonoBehaviour
         {
             Time.timeScale = 0;
             pauseP.SetActive(true);
-            print(pauseP);
         }
         paused = !paused;
     }
