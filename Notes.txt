@@ -2,10 +2,7 @@ Change the aesthetic of the game
 -Make it simple, but colourful and unique
 -Create animation, point of this is to actually learn how to
 -Once that done, try making a few scenes, google how to
--Do the grab the wall thing
--Player interacts weirdly with collisions, investigate #########
--The on collision stay causes the jump to be reseted after jumping, allowing a double jump, check it
-make the pause menu script
+
 colour theme? would work well with the light colour theme as well. 
 Upon colliding with stuff, you get the colour of the object and that gets yours, or maybe you just the colour
 Alternatively, gems with colours that you pick up and you get the colour?.
@@ -13,8 +10,14 @@ Can use Green, blue, purle orange?, use the colour thingy to choose.
 
 
 Project Info:
- FFA319 colour of player
- adobe colour
+adobe colour
+ FFA317 colour of player
+ 
+ A347E6 Purple Gem
+ 36E673 Green Gem 
+ 4C99E6 Blue Gem
+ FFFFFF White Gem
+
 
 Stuff to Check:
 https://www.eneba.com/collection/best-platformer-games-2d-side-scrollers
