@@ -5,6 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class ColorfulPlayer : MonoBehaviour
 {
+    private static int pickups = 0;
     private SpriteRenderer spriteR;
     private Light2D light;
     private Color OriginalColor = new Color(1f, 0.64f, 0.09f, 1f); //Original
@@ -20,6 +21,7 @@ public class ColorfulPlayer : MonoBehaviour
     {
         spriteR = GetComponent<SpriteRenderer>();
         light = GetComponent<Light2D>();
+
     }
 
     public void ChangeColor(Color color)
@@ -39,5 +41,16 @@ public class ColorfulPlayer : MonoBehaviour
             }
             count++;
         }
+    }
+
+    public void IncreaseLight(float amount = 0.4f)
+    {
+        pickups++;
+        light.pointLightOuterRadius += amount;
+    }
+
+    public int getPickups()
+    {
+        return pickups;
     }
 }

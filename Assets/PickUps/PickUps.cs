@@ -5,25 +5,27 @@ using UnityEngine.UI;
 
 public class PickUps : MonoBehaviour
 {
-    private AI ai;
+    private ColorfulPlayer player;
     private Text tex;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject uiText = GameObject.Find("FoodText");
+        GameObject uiText = GameObject.Find("SunText");
         tex = uiText.GetComponent<Text>();
-        GameObject _ai = GameObject.FindWithTag("AI");
-        ai = _ai.GetComponent<AI>();
-        tex.text = (ai.getFood()).ToString();
+
+        GameObject _player = GameObject.FindWithTag("Player");
+        player = _player.GetComponent<ColorfulPlayer>();
+
+        tex.text = (player.getPickups()).ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player")
         {
-            ai.FoodPickup();
-            tex.text = (ai.getFood()).ToString();
+            player.IncreaseLight();
+            tex.text = (player.getPickups()).ToString();
             Destroy(gameObject);
         }
     }

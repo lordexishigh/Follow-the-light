@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
         left = right = 0f;
        // WallJumpDirection = 0f;
         velocity = 0.001f;
-        maxVelocity = 0.1f;
+        maxVelocity = 0.222f;
 
         groundAccelaration = 0.005f;
         //airAcceleration = 0.001f;
@@ -118,6 +118,7 @@ public class Movement : MonoBehaviour
         }
         velocity += direction * xspeed;
         rigidBody.velocity = new Vector2(velocity, jumpSpeed);
+        JumpAvailable = false;
         OnGround = false;
     }
 
@@ -142,6 +143,15 @@ public class Movement : MonoBehaviour
     //    else { WallJumpDirection = 1; }
     //}
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+        if (!Input.GetButton("ExplosiveJumpE") && !Input.GetButton("ExplosiveJumpQ"))
+        {
+            evaluateCollision(collision);
+        }
+    }
+
     private void evaluateCollision(Collision2D collision)
     {
         bool collided = false;
@@ -149,7 +159,7 @@ public class Movement : MonoBehaviour
         for (int i = 0; i < collision.contactCount; i++)
         {
             Vector2 normal = collision.GetContact(i).normal;
-
+            print(normal);
             if (normal.y >= 0.6f)
             {
                 OnGround = true;
@@ -174,6 +184,8 @@ public class Movement : MonoBehaviour
         {
             gameObject.transform.SetParent(null);
         }
+        JumpAvailable = false;
+        OnGround = false;
     }
 
     //private void OnTriggerExit2D(Collider2D collider)
