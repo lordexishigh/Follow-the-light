@@ -7,13 +7,15 @@ public class ColorfulPlayer : MonoBehaviour
 {
     private static int pickups = 0;
     private SpriteRenderer spriteR;
-    private Light2D light;
+    private new Light2D light;
     private Color OriginalColor = new Color(1f, 0.64f, 0.09f, 1f); //Original
-    public static Color[] colors = { 
-        new Color(0.21f, 0.90f, 0.45f, 1.0f), //Green 36E673
-        new Color(0.30f, 0.60f, 0.90f, 1.0f), //Blue 4C99E6
-        new Color(0.64f, 0.28f, 0.90f, 1.0f), //Purple A347E6
-        new Color(1.0f, 1.0f, 1.0f, 1.0f) //White FFFFFF
+    private static Color currentColor;
+    public static Color[] colors = {
+        new Color(0.07843138f, 0.7490196f, 0.1803922f, 1.0f), //Green 14BF2E 
+        new Color(0.09019608f, 0.5019608f, 0.9098039f, 1.0f), //Blue 1780E8 
+        new Color(0.6313726f, 0.2705882f, 0.9019608f, 1.0f), //Purple A145E6 
+        new Color(1f, 0.6392157f, 0.09019608f, 1f) 
+        //new Color(1.0f, 1.0f, 1.0f, 1.0f) //White FFFFFF
     }; 
 
     // Start is called before the first frame update
@@ -21,6 +23,13 @@ public class ColorfulPlayer : MonoBehaviour
     {
         spriteR = GetComponent<SpriteRenderer>();
         light = GetComponent<Light2D>();
+        if(currentColor == Color.clear)
+        {
+            currentColor = spriteR.color;
+        }
+
+            
+        ChangeColor(currentColor);
 
     }
 
@@ -28,6 +37,7 @@ public class ColorfulPlayer : MonoBehaviour
     {
         spriteR.color = color;
         light.color = color;
+        currentColor = color;
         int count = 0;
         foreach (Color x in colors)
         {
@@ -43,7 +53,7 @@ public class ColorfulPlayer : MonoBehaviour
         }
     }
 
-    public void IncreaseLight(float amount = 0.4f)
+    public void increaseLight(float amount = 0.4f)
     {
         pickups++;
         light.pointLightOuterRadius += amount;

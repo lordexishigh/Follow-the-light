@@ -6,12 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/(0)MainMenu.unity
     guid: 0b0fa8715c0b0b141b9223fd761d11c4
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/(1NN)GettingIn.unity
+    guid: 32a8c2a5756265440bd52bd6d77dbb24
   - enabled: 1
-    path: Assets/Scenes/Scene2.unity
-    guid: 4340db8b494dbee47833b698b9915aaa
+    path: Assets/Scenes/(2NB)TheFace.unity
+    guid: b6a9cf901e514174e83a645bb54a967a
+  - enabled: 1
+    path: Assets/Scenes/(3BO)Diamond.unity
+    guid: 78f23a73d1ca26e4291a0c4bff8de8f9
+  - enabled: 1
+    path: Assets/Scenes/(4OG)TrafficLights.unity
+    guid: ba495934f6992bd47a580e5e485c0631
+  - enabled: 1
+    path: Assets/Scenes/(5GP)FreeFall.unity
+    guid: 12fcace2a2c59c144885e730afc3d755
+  - enabled: 1
+    path: Assets/Scenes/(6BP)Crosspath.unity
+    guid: 72b8718e2964e084ea8e489d5e863b96
   m_configObjects: {}

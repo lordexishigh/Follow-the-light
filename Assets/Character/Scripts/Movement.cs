@@ -5,12 +5,9 @@ using System.Threading;
 
 public class Movement : MonoBehaviour
 {
-    private float left, right;
-
+    private float input;
     [SerializeField]
     private float groundAccelaration;
-    //private float airAcceleration;
-    //private float deceleration;
 
     [SerializeField]
     private float velocity;
@@ -19,101 +16,63 @@ public class Movement : MonoBehaviour
     private float jumpSpeed;
     [SerializeField]
     public bool JumpAvailable;
-    //public float WallJumpDirection;
 
     public bool OnGround;
-    //public bool OnWall;
-    public bool carries;
     public bool expReady;
 
     private Rigidbody2D rigidBody;
     private Controller cotr;
 
-    // Start is called before the first frame update
+    private Vector2 slope;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         cotr = GetComponent<Controller>();
         Physics.IgnoreLayerCollision(0, 6);
 
-        left = right = 0f;
-       // WallJumpDirection = 0f;
+        input = 0f;
         velocity = 0.001f;
-        maxVelocity = 0.222f;
+        maxVelocity = 7.222f;
+        slope.Set(1f, 1f);
 
-        groundAccelaration = 0.005f;
-        //airAcceleration = 0.001f;
-        //deceleration = 0.1f;
+        groundAccelaration = 0.5f;
 
         jumpSpeed = 10f;
         JumpAvailable = true;
         OnGround = true;
-       // OnWall = false;
-        carries = false;
         expReady = true;
     }
 
     void FixedUpdate()
     {
-        if (!carries)
+        input = Input.GetAxisRaw("Horizontal");
+
+        if (OnGround)
         {
-            left = Input.GetAxisRaw("Left");
-            right = Input.GetAxisRaw("Right");
-
-            if (OnGround)
+            if ((input == 0) || (input > 0 && velocity <= 0 || input < 0 && velocity >= 0))
             {
-                if (left + right == 0)
-                {
-                    velocity = 0;
-                }
-
-                else if (left + right > 0 && velocity < 0 || left + right < 0 && velocity > 0)
-                {
-                    velocity = 0f;
-                }
-
-                //else if (Mathf.Abs(velocity) < maxVelocity)
-                //{
-                //    velocity += (left + right) * groundAccelaration;
-                //}
+                velocity = 0;
             }
-
-            else
-            {
-                if (left + right > 0 && velocity < 0 || left + right < 0 && velocity > 0) // to alow mid air movement
-                {
-                    velocity += (left + right) * groundAccelaration;
-                }
-             
-
-                //else if (Mathf.Abs(velocity) < maxVelocity)
-                //{
-                //    velocity += (left + right) * groundAccelaration;
-                //}
-            }
-
-            if (Mathf.Abs(velocity) < maxVelocity)
-            {
-                velocity += (left + right) * groundAccelaration;
-            }
-
         }
-        else
+
+        else if (input > 0 && velocity < 0 || input < 0 && velocity > 0) // to allow mid air movement
         {
-            velocity = 0f;
+            velocity += input * groundAccelaration;   
         }
-        UpdatePlayer();  
+
+        if (Mathf.Abs(velocity) < maxVelocity)
+        {
+            velocity += input * groundAccelaration;
+        }
+
+        UpdatePlayer();
     }
 
     public void Jump(float xspeed = 0, float direction = 0)
     {
-        //if (OnWall)
-        //{
-        //    xspeed = 0.2f;
-        //    direction = WallJumpDirection;
-        //}
-        //else
-        if (xspeed!=0 && ((velocity > 0 && direction < 0) || velocity < 0 && direction > 0)){
+        if (xspeed != 0 && ((velocity > 0 && direction < 0) || velocity < 0 && direction > 0))
+        {
             velocity = 0f;
         }
         velocity += direction * xspeed;
@@ -125,27 +84,16 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        while (((left + right) * velocity > maxVelocity)) //this will slow down the player if they went above the max velocity limit during their jump when they land
+        while (input * velocity > maxVelocity) //this will slow down the player if they went above the max velocity limit during their jump when they land
         {
-            velocity -= (left + right) * groundAccelaration / 2;
+            velocity -= input * groundAccelaration / 2;
         }
         evaluateCollision(collision);
     }
 
-    //private void OnTriggerEnter2D(Collider2D collider)
-    //{
-    //    OnWall = true;
-    //    JumpAvailable = true;
-    //    if (velocity > 0)
-    //    {
-    //        WallJumpDirection = -1;
-    //    }
-    //    else { WallJumpDirection = 1; }
-    //}
-
     private void OnCollisionStay2D(Collision2D collision)
     {
-        
+
         if (!Input.GetButton("ExplosiveJumpE") && !Input.GetButton("ExplosiveJumpQ"))
         {
             evaluateCollision(collision);
@@ -155,11 +103,10 @@ public class Movement : MonoBehaviour
     private void evaluateCollision(Collision2D collision)
     {
         bool collided = false;
-        
-        for (int i = 0; i < collision.contactCount; i++)
+
+        for (int i = 0; i < collision.contactCount; i++)  
         {
             Vector2 normal = collision.GetContact(i).normal;
-            print(normal);
             if (normal.y >= 0.6f)
             {
                 OnGround = true;
@@ -169,11 +116,27 @@ public class Movement : MonoBehaviour
                     gameObject.transform.SetParent(collision.transform);
                 }
             }
-           
 
-            if(Mathf.Abs(normal.x) > 0.7f)
+            
+            if (Mathf.Abs(normal.x) > 0.9f)
             {
                 velocity = 0f;
+            }
+            slope = -input * Vector2.Perpendicular(normal).normalized;
+
+            //print("Angle" + angle);
+            Debug.DrawLine(slope + (Vector2)transform.position, transform.position);
+           // print("Slope" + slope);
+           // print("Normal" + normal);
+            //Debug.DrawLine(transform.position, slope);
+
+            if (slope.y == 0f)
+            {
+                slope.Set(slope.x, 1f);
+            }
+            if(slope.x <= 0f)
+            {
+                slope.Set(1f, slope.y);
             }
         }
     }
@@ -186,20 +149,12 @@ public class Movement : MonoBehaviour
         }
         JumpAvailable = false;
         OnGround = false;
+        slope.Set(1f, 1f);
     }
-
-    //private void OnTriggerExit2D(Collider2D collider)
-    //{
-    //    OnWall = false;
-    //    JumpAvailable = false;
-    //}
 
     private void UpdatePlayer()
     {
-        rigidBody.velocity = new Vector2(velocity, rigidBody.velocity.y);
-        transform.position = transform.position + new Vector3(velocity, 0, 0);
+        rigidBody.velocity = new Vector2(velocity /** slope.x*/, rigidBody.velocity.y /** slope.y*/);
+        // transform.position = transform.position + new Vector3(velocity, 0, 0);
     }
-
-
-
 }
